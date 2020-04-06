@@ -1,11 +1,26 @@
+<!DOCTYPE html>
 <html>
 
 <head>
-    <title>Git Pages Sample</title>
+    <title>My Git Page</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("button").click(function() {
+                $("#test").hide();
+            });
+        });
+    </script>
 </head>
 
 <body>
-    My First plan html page
+    <h2>This is a heading</h2>
+
+    <p>This is a paragraph.</p>
+    <p id="test">This is another paragraph.</p>
+
+    <button>Click me</button>
 </body>
 
 </html>
