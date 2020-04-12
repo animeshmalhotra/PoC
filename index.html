@@ -1,26 +1,27 @@
-<!DOCTYPE html>
 <html>
 
 <head>
-    <title>My Git Page</title>
+    <meta charset="utf-8" />
+    <title>Read and Parse JSON String in jQuery | Example</title>
+</head>
+
+<body>
+    <div id="datalist"></div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script>
         $(document).ready(function() {
-            $("button").click(function() {
-                $("#test").hide();
+            $.getJSON("test.json", function(data) {
+                var nameAge = "";
+
+                $.each(data, function(i, item) {
+                    nameAge += item.Name + "  " + item.Age + "<br> <br>";
+
+                    $("#datalist").html(nameAge);
+                });
             });
         });
     </script>
-</head>
-
-<body>
-    <h2>This is a heading</h2>
-
-    <p>This is a paragraph.</p>
-    <p id="test">This is another paragraph.</p>
-
-    <button>Click me</button>
 </body>
 
 </html>
